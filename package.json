@@ -28,22 +28,34 @@
   },
   "homepage": "https://github.com/dobjs/dob-redux-todomvc#readme",
   "devDependencies": {
+    "@types/classnames": "^2.2.3",
     "@types/node": "*",
     "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/react-redux": "^5.0.12",
     "@types/webpack": "*",
     "ascoders-tslint-config": "^1.0.2",
     "ava": "^0.23.0",
     "codecov": "^3.0.0",
+    "css-loader": "^0.28.7",
     "nyc": "^11.3.0",
     "pre-commit": "^1.2.2",
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
     "run-react": "^2.1.8",
+    "style-loader": "^0.19.0",
     "tslint": "^5.8.0",
     "typescript": "^2.6.1",
     "webpack": "^3.8.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "dob": "^2.5.4",
+    "dob-redux": "^1.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "todomvc-app-css": "^2.1.0"
+  },
   "pre-commit": [
     "tslint"
   ],
@@ -54,6 +66,15 @@
     "dlls": [
       "react",
       "react-dom"
+    ],
+    "rules": [
+      {
+        "test": ".css$",
+        "use": [
+          "style-loader",
+          "css-loader"
+        ]
+      }
     ],
     "production": {
       "path": "built",
